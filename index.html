@@ -9,10 +9,12 @@
 
 <title>Resume</title>
 </head>
-<body>
+<body id="body">
 
 <div class="header">
   <h1>Resume</h1>
+  
+
 </div>
 
 <div class="row">
@@ -23,15 +25,34 @@
       <li><a href="#sec3">Work Experience</a></li>
       <li><a href="#sec4">About Me</a></li>
       <li><a href="#sec5">Skills</a></li>
-    
+      <li class="edit"><a onclick="editName()">Edit Name</a></li>
+   
     </ul>
+    <div id="bg" onmouseover="underline()" onmouseout="out()">
+        <label>Change Background</label>
+        <select name="Background" id="Background" onchange="changeBg(this)">
+        <option value="lightcyan">Original</option>
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+        <option value="purple">Purple</option>
+        </select>
+      </div>
   </div>
+
 
 
   <div class="col-6 col-s-9">
         <img  src="/img/Bell.png" alt="description" height="273" width="245" />     
     <div class="personal">
-      <h2>Phat Phatharanon-uthai</h2>
+      
+      <h2 id="name" >Phat Phatharanon-uthai</h2>
+      
+   
+      <br>
 <hr>
       <h3>Personal Info :</h3>
 <hr>
@@ -46,7 +67,7 @@
     </ul>
     <br>
   </div>
-
+<br>
   <div class="edu">
     <hr>
     <h3>Education :</h3>
@@ -61,6 +82,7 @@
       </ul>
       <br>
     </div>
+    <br>
     <div class="work">
  <hr>
       <h3>Work Experience :</h3>
@@ -75,6 +97,7 @@
       </ul>
       <br>
     </div>
+    <br>
     <div id="sec4" class="About Me">
       <hr>
         <h3>About Me</h3>
@@ -89,19 +112,28 @@
   <div class="col-3 col-s-12">
       <div class="aside">
           <div class="pic4">
-              <img  src="/img/brain.png" alt="description" height="240" width="300" />
+              <img  src="/img/brain.png" alt="description" height="200" width="250" />
           </div>
           
        <div id="sec5" class="skills">
-        <h4>Skills</h4>
-        <ul class="info4">
+         <br>
+         <h4>Please input New Skill</h4>
+        <input type="text" id="Input" placeholder="New skill">
+        <br>
+        <button onclick="addSkill()" >ADD SKILL</button>
+        
+        <button onclick="rmSkill()" >REMOVE SKILL</button>
+        <br>
+        <h4>Skills :</h4>
+        <ul class="info4" id="skill">
           <li>Business Development</li>
-          <li>Strong organizational and analytical skills</li>
+          <li>Strong  analytical skills</li>
           <li>Service orientation</li>
           <li>Continual improvement</li>
           <li>Stress management</li>
         </ul>
       </div>
+     
       </div>
     </div>
   
